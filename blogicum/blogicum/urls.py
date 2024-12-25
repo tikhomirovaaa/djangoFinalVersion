@@ -14,6 +14,7 @@ urlpatterns = [
     path('auth/', include('django.contrib.auth.urls')),
     path('auth/registration/', include('users.urls')),
 ]
+
 """Подключила к проекту кастомные страницы ошибок. """
 handler403 = 'pages.views.csrf_failure'
 

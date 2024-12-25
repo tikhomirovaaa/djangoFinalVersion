@@ -1,7 +1,14 @@
-from django.urls import path
+"""
+Этот файл у меня определяет маршрутизацию (URL) для управления пользователями в приложении.
+Здесь настраивается URL-адрес для регистрации новых пользователей.
+"""
 
+from django.urls import path
 from . import views
 
 urlpatterns = [
+    # URL для страницы регистрации пользователя.
+    # При доступе к корневому URL ('') вызывается метод as_view()
+    # класса UserCreateView, который обрабатывает регистрацию нового пользователя.
     path('', views.UserCreateView.as_view(), name='registration'),
 ]
